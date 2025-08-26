@@ -38,15 +38,20 @@ function fatorial (number2) {
     return resultado;
 }
 
+
 let number2 = parseInt(prompt("Digite um número para calcular o fatorial:")); // Captura o número para o cálculo do fatorial
 let resultado = fatorial (number2);
 alert(`O fatorial de ${number2} é: ${resultado}`); // Exibe o resultado do fatorial
 
+
+
 function maior (array) {
-    if (!Array.isArray(array))
+
+    if (!Array.isArray(array)) {
         return 'Erro: Por favor, insira um array válido.'; // Verifica se a entrada é um array
+
     }
-    if(array.length === 0 ) {
+    if (array.length === 0 ) {
         return "Erro : Array está vazio."
     }
 
@@ -63,4 +68,11 @@ function maior (array) {
         }
     }
 
-    return(maior);
+ return maior;
+
+}
+
+let input2 = prompt("Digite números separados por vírgula (ex: 10,5,8,20):");
+let arrayUsuario = input2.split(',').map(num => parseFloat(num.trim()));
+let resultado2 = maior(arrayUsuario);
+alert(`O maior número é: ${resultado2}`);
