@@ -1,5 +1,5 @@
 
-# 🚀 atividades-javascript Bolsa Futuro Digital
+# 📋 atividades-javascript Bolsa Futuro Digital
 
 # 🚀 Funções Utilitárias em JavaScript
 
@@ -118,105 +118,29 @@ console.log(maior([5, 'texto', 15]));
 
 ---
 
-## 🚀 Como Usar
+## 🚀 Como Utilizar as Funções
 
-Para utilizar estas funções em seu projeto, simplesmente copie o código da função desejada para o seu arquivo JavaScript.
+### 1. Seleção do Código
+Escolha a função desejada no repositório e copie o código JavaScript correspondente.
 
-**Exemplo de integração no HTML (com interação do usuário):**
+### 2. Execução do Código
+Existem duas formas de executar:
 
-```html
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Funções Utilitárias</title>
-</head>
-<body>
-    <h1>Teste as Funções</h1>
-    <script>
-function veriimparoupar (number) { // Função para verificar se um número é par ou ímpar
+**Opção A: Console do Navegador**
+- Abra as Ferramentas do Desenvolvedor (F12)
+- Acesse a aba "Console"
+- Cole o código e pressione Enter
 
-    if (typeof number !== 'number' || isNaN(number)) {
-        return 'Erro: Por favor, insira um número válido.'; //faz a verificação se o número é valido
-    }
+**Opção B: Arquivo JavaScript**
+- Crie um arquivo `.js` em seu projeto
+- Cole o código da função
+- Importe em seu HTML: `<script src="seu-arquivo.js"></script>`
 
-    
-    if (!Number.isInteger(number)) {
-        return 'Erro: A função suporta apenas números inteiros.'; // faz a verificação se o número é inteiro
-    };
-    {
-    if (number % 2 === 0)  // verifica se o número é par
-        return 'par';
-    else 
-        return 'impar'; // verifica se o número é ímpar
-    };
-}
+### 3. Execução da Função
+Após incluir o código, chame a função conforme necessário em seu projeto.
 
-let input = prompt("Qual é o número que você deseja fazer a verificação?"); 
-let number = parseFloat(input); // Agora captura números com decimais
-
-alert(veriimparoupar(number)); // Verifica se o número é par ou ímpar
-
-function fatorial (number2) {
-
-    if (typeof number2 !== 'number' || isNaN(number2)) {
-        return 'Erro: Por favor, insira um número válido.'; //faz a verificação se o número é valido
-    }
-
-    if (!Number.isInteger(number2) || number2 < 0) {
-        return 'Erro: A função suporta apenas números inteiros.'; // faz a verificação se o número é inteiro e não negativo
-    }
-
-    let resultado = 1;
-    for (let i = 2; i <= number2; i++) { // calcula o fatorial
-        resultado *= i;
-    }
-    return resultado;
-}
-
-
-let number2 = parseInt(prompt("Digite um número para calcular o fatorial:")); // Captura o número para o cálculo do fatorial
-let resultado = fatorial (number2);
-alert(`O fatorial de ${number2} é: ${resultado}`); // Exibe o resultado do fatorial
-
-
-
-function maior (array) { // Função para encontrar o maior número em um array
-
-    if (!Array.isArray(array)) {
-        return 'Erro: Por favor, insira um array válido.'; // Verifica se a entrada é um array
-
-    }
-    if (array.length === 0 ) {
-        return "Erro : Array está vazio." // Verifica se o array está vazio
-    }
-
-    let maior = array[0]; // Inicializa o maior número como o primeiro elemento do array
-
-    for (let i = 1; i < array.length; i++) {  // Itera sobre os elementos restantes do array
-
-        if (typeof array[i] !== 'number' || isNaN(array[i])) { // Verifica se o elemento é um número válido
-            return 'Erro: O array contém valores não numéricos.';
-        }
-
-        if (array[i] > maior) { // Verifica se o elemento atual é maior que o maior encontrado
-            maior = array[i]; 
-        }
-    }
-
- return maior; // Retorna o maior número encontrado no array
-
-}
-
-let input2 = prompt("Digite números separados por vírgula (ex: 1,2,3,4):");  // Solicita ao usuário que insira números
-let arrayUsuario = input2.split(',').map(num => parseFloat(num.trim())); // Converte a entrada em um array de números
-let resultado2 = maior(arrayUsuario); // Encontra o maior número no array
-alert(`O maior número é: ${resultado2}`); // Exibe o maior número encontrado
-
-    </script>
-</body>
-</html>
-```
+### 4. Parâmetros de Entrada
+Cada função possui parâmetros específicos que devem ser fornecidos conforme a documentação.
 
 ## 📂 Estrutura do Código
 
