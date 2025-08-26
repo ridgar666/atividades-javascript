@@ -1,4 +1,4 @@
-function veriimparoupar (number) {
+function veriimparoupar (number) { // Função para verificar se um número é par ou ímpar
 
     if (typeof number !== 'number' || isNaN(number)) {
         return 'Erro: Por favor, insira um número válido.'; //faz a verificação se o número é valido
@@ -45,34 +45,34 @@ alert(`O fatorial de ${number2} é: ${resultado}`); // Exibe o resultado do fato
 
 
 
-function maior (array) {
+function maior (array) { // Função para encontrar o maior número em um array
 
     if (!Array.isArray(array)) {
         return 'Erro: Por favor, insira um array válido.'; // Verifica se a entrada é um array
 
     }
     if (array.length === 0 ) {
-        return "Erro : Array está vazio."
+        return "Erro : Array está vazio." // Verifica se o array está vazio
     }
 
-    let maior = array[0];
+    let maior = array[0]; // Inicializa o maior número como o primeiro elemento do array
 
-    for (let i = 1; i < array.length; i++) {
+    for (let i = 1; i < array.length; i++) {  // Itera sobre os elementos restantes do array
 
-        if (typeof array[i] !== 'number' || isNaN(array[i])) {
+        if (typeof array[i] !== 'number' || isNaN(array[i])) { // Verifica se o elemento é um número válido
             return 'Erro: O array contém valores não numéricos.';
         }
 
-        if (array[i] > maior) {
-            maior = array[i]; // Encontra o maior número no array
+        if (array[i] > maior) { // Verifica se o elemento atual é maior que o maior encontrado
+            maior = array[i]; 
         }
     }
 
- return maior;
+ return maior; // Retorna o maior número encontrado no array
 
 }
 
-let input2 = prompt("Digite números separados por vírgula (ex: 10,5,8,20):");
-let arrayUsuario = input2.split(',').map(num => parseFloat(num.trim()));
-let resultado2 = maior(arrayUsuario);
-alert(`O maior número é: ${resultado2}`);
+let input2 = prompt("Digite números separados por vírgula (ex: 1,2,3,4):");  // Solicita ao usuário que insira números
+let arrayUsuario = input2.split(',').map(num => parseFloat(num.trim())); // Converte a entrada em um array de números
+let resultado2 = maior(arrayUsuario); // Encontra o maior número no array
+alert(`O maior número é: ${resultado2}`); // Exibe o maior número encontrado
