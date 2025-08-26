@@ -22,8 +22,8 @@ Retorno:
 'impar' (String): Se o número for ímpar.
 'Erro: Por favor, insira um número válido.' (String): Se a entrada não for um número.
 'Erro: A função suporta apenas números inteiros.' (String): Se a entrada for um número com casas decimais.
-Exemplo de Uso:
 
+Exemplo de Uso:
 code
 JavaScript
 // Exemplo com interação do usuário
