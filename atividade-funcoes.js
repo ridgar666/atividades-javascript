@@ -42,3 +42,25 @@ let number2 = parseInt(prompt("Digite um número para calcular o fatorial:")); /
 let resultado = fatorial (number2);
 alert(`O fatorial de ${number2} é: ${resultado}`); // Exibe o resultado do fatorial
 
+function maior (array) {
+    if (!Array.isArray(array))
+        return 'Erro: Por favor, insira um array válido.'; // Verifica se a entrada é um array
+    }
+    if(array.length === 0 ) {
+        return "Erro : Array está vazio."
+    }
+
+    let maior = array[0];
+
+    for (let i = 1; i < array.length; i++) {
+
+        if (typeof array[i] !== 'number' || isNaN(array[i])) {
+            return 'Erro: O array contém valores não numéricos.';
+        }
+
+        if (array[i] > maior) {
+            maior = array[i]; // Encontra o maior número no array
+        }
+    }
+
+    return(maior);
