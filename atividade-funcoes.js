@@ -16,7 +16,7 @@ function veriimparoupar (number) {
     };
 }
 
-let input = prompt("Qual é o número que você deseja verificar?");
-let number = parseFloat(input); 
+let input = prompt("Qual é o número que você deseja verificar?"); 
+let number = parseFloat(input); // Agora captura números com decimais
 
-alert(veriimparoupar(number));
+alert(veriimparoupar(number)); // Verifica se o número é par ou ímpar
